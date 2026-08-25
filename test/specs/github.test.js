@@ -16,6 +16,12 @@ import SecurityAdvancedSecuritySoftwareSupplyChainPage from "../pageobjects/gith
 // Security / Plans & pricing
 import SecurityPlansPage from "../pageobjects/github/security.plans.js"
 
+// Pricing
+import PricingPage from "../pageobjects/github/pricing.page.js"
+
+// Pick your trial enterprise plan
+import PickEnterprisePlanPage from "../pageobjects/github/organizations.enterprise_plan.js"
+
 
 
 
@@ -117,49 +123,158 @@ describe("github tests", () => {
 
 
 
+    // Test Case 2: Pick Enterprise Cloud Trial Plan
+
+    // 1.   Open "https://github.com/"
+    //      Expected Result:
+    //      The homepage should load successfully
+
+    // 2.   Scroll to the footer section
+    //      Expected Result:
+    //      The footer section should be visible
+
+    // 3.   Verify that the "Pricing" link is visible
+    //      Expected Result:
+    //      The "Pricing" link should be visible
+
+    // 4.   Click the "Pricing" link
+    //      Expected Result:
+    //      The Pricing page should load successfully
+
+    // 5.   Verify that the header "Try the Copilot-powered platform" is visible
+    //      Expected Result:
+    //      The header "Try the Copilot-powered platform" should be visible
+
+    // 6.   Verify that the "Start a free trial" button in the Enterprise card is visible
+    //      Expected Result:
+    //      The "Start a free trial" button in the Enterprise card should be visible
+
+    // 7.   Click the "Start a free trial" button
+    //      Expected Result:
+    //      The trial plan selection page should load successfully
+
+    // 8.   Verify that the header "Pick your trial plan" is visible
+    //      Expected Result:
+    //      The header "Pick your trial plan" should be visible
+
+    // 9.   Verify that the "Enterprise Cloud" and "Enterprise Server" trial plans are displayed
+    //      Expected Result:
+    //      The "Enterprise Cloud" and "Enterprise Server" trial plans should be visible on the page
+
+
+    it.only("should pick enterprise cloud trial plan", async () => {
+        await MainPage.openMainPage()
+        await Footer.scrollToFooter()
+
+        await Footer.isPricingDisplayed()
+        await Footer.clickOnPricing()
+        await PricingPage.checkPageURL()
+
+        await PricingPage.assertHeaderText()
+        await PricingPage.scrollTostartFreeTrialButton()
+        await PricingPage.isStartFreeTrialButtonDisplayed()
+        await PricingPage.clickStartFreeTrialButton()
+        await PickEnterprisePlanPage.checkPageURL()
+
+        
+        //Verify that the "Pick your trial plan" header is visible
+        await PickEnterprisePlanPage.assertHeaderText()
+        // Verify that both Enterprise trial plans are displayed
+        await PickEnterprisePlanPage.assertEnterpriseCloudText()
+        await PickEnterprisePlanPage.assertEnterpriseServerText()
+    });
+
+
+
+
+
+    // Test Case 3: Download GitHub Desktop
+
+    // 1.   Open "https://github.com/"
+    //      Expected Result:
+    //      The homepage should load successfully
+
+    // 2.   Open "https://github.com/apps/desktop"
+    //      Expected Result:
+    //      The GitHub Desktop page should load successfully
+
+    // 3.   Verify that the "Download for Windows" button is visible
+    //      Expected Result:
+    //      The "Download for Windows" button should be visible and enabled
+
+    // 4.   Click the "Download for Windows" button
+    //      Expected Result:
+    //      The GitHub Desktop installer download should start successfully
+
+    // 5.   Verify that the GitHub Desktop installer file has been downloaded
+    //      Expected Result:
+    //      A GitHub Desktop installer file should be present in the configured download directory
+
+
+
+
+
+
+    // Test Case 4: Perform a Search
+
+    // 1.   Open "https://github.com/"
+    //      Expected Result:
+    //      The homepage should load successfully
+
+    // 2.   Click the "Search" input field in the header
+    //      Expected Result:
+    //      The search input field should be focused and ready for text entry
+
+    // 3.   Enter "wine" into the search field and press the Enter key
+    //      Expected Result:
+    //      The search results page should load successfully
+    //      and display results for "wine"
+
+    // 4.   Verify that the word "wine" appears in one of the result cards
+    //      Expected Result:
+    //      At least one search result card should contain the word "wine",
+    //      and its href should correspond to a valid search result
+
+
+
+
+
+
+
+    // Test Case 5: Verify Pricing Page Features
+
+    // 1.   Open "https://github.com/"
+    //      Expected Result:
+    //      The homepage should load successfully
+
+    // 2.   Click the "Pricing" link in the header
+    //      Expected Result:
+    //      The Pricing page should load successfully
+
+    // 3.   Verify that the header "Try the Copilot-powered platform" is visible
+    //      Expected Result:
+    //      The header "Try the Copilot-powered platform" should be visible
+
+    // 4.   Scroll to the "Compare all features" section
+    //      Expected Result:
+    //      The "Compare all features" section should be visible
+
+    // 5.   Click the "Compare all features" link
+    //      Expected Result:
+    //      The Compare Features page or section should load successfully
+
+    // 6.   Verify that the header "Compare features" is visible
+    //      Expected Result:
+    //      The header "Compare features" should be visible
+
+    
+
 });
 
 
 
 
 
-// Test Case 2: Pick Enterprise Cloud Trial Plan
-
-// 1.   Open "https://github.com/"
-//      Expected Result:
-//      The homepage should load successfully
-
-// 2.   Scroll to the footer section
-//      Expected Result:
-//      The footer section should be visible
-
-// 3.   Verify that the "Pricing" link is visible
-//      Expected Result:
-//      The "Pricing" link should be visible
-
-// 4.   Click the "Pricing" link
-//      Expected Result:
-//      The Pricing page should load successfully
-
-// 5.   Verify that the header "Try the Copilot-powered platform" is visible
-//      Expected Result:
-//      The header "Try the Copilot-powered platform" should be visible
-
-// 6.   Verify that the "Start a free trial" button in the Enterprise card is visible
-//      Expected Result:
-//      The "Start a free trial" button in the Enterprise card should be visible
-
-// 7.   Click the "Start a free trial" button
-//      Expected Result:
-//      The trial plan selection page should load successfully
-
-// 8.   Verify that the header "Pick your trial plan" is visible
-//      Expected Result:
-//      The header "Pick your trial plan" should be visible
-
-// 9.   Click the "Enterprise Cloud" card
-//      Expected Result:
-//      The "Enterprise Cloud" trial plan should be selected successfully
 
 
 
@@ -167,113 +282,4 @@ describe("github tests", () => {
 
 
 
-
-// Test Case 3: Subscribe to Newsletter
-
-// 1.   Open "https://github.com/"
-//      Expected Result:
-//      The homepage should load successfully
-
-// 2.   Scroll to the footer section
-//      Expected Result:
-//      The footer section should be visible
-
-// 3.   Verify that the "Subscribe" button is visible and clickable
-//      Expected Result:
-//      The "Subscribe" button should be visible and enabled
-
-// 4.   Click the "Subscribe" button
-//      Expected Result:
-//      The GitHub newsletter page should load successfully
-
-// 5.   Verify that the URL is "https://github.com/newsletter"
-//      Expected Result:
-//      The current URL should be "https://github.com/newsletter"
-
-// 6.   Verify that the text "Get our developer newsletter" is visible
-//      Expected Result:
-//      The text "Get our developer newsletter" should be visible
-
-// 7.   Enter "qwerty@qwerty.com" into the "Work email" input field
-//      Expected Result:
-//      The email address "qwerty@qwerty.com" should be entered successfully
-
-// 8.   Click the "Country" dropdown
-//      Expected Result:
-//      The country dropdown should open successfully
-
-// 9.   Search for and select a country, such as "France"
-//      Expected Result:
-//      The selected country should be displayed in the "Country" field
-
-// 10.  Select the checkbox with the text:
-//      "Yes, please. I’d like GitHub and affiliates to use my information for personalized communications,
-//      targeted advertising, and campaign effectiveness. See the GitHub Privacy Statement for more details."
-//      Expected Result:
-//      The checkbox should be selected successfully
-
-// 11.  Click the "Subscribe" button
-//      Expected Result:
-//      The newsletter subscription should be submitted successfully
-
-// 12.  Verify that the header "Thanks for subscribing" is visible
-//      Expected Result:
-//      The header "Thanks for subscribing" should be visible
-
-
-
-
-
-
-// Test Case 4: Perform a Search
-
-// 1.   Open "https://github.com/"
-//      Expected Result:
-//      The homepage should load successfully
-
-// 2.   Click the "Search" input field in the header
-//      Expected Result:
-//      The search input field should be focused and ready for text entry
-
-// 3.   Enter "wine" into the search field and press the Enter key
-//      Expected Result:
-//      The search results page should load successfully
-//      and display results for "wine"
-
-// 4.   Verify that the word "wine" appears in one of the result cards
-//      Expected Result:
-//      At least one search result card should contain the word "wine",
-//      and its href should correspond to a valid search result
-
-
-
-
-
-
-
-// Test Case 5: Verify Pricing Page Features
-
-// 1.   Open "https://github.com/"
-//      Expected Result:
-//      The homepage should load successfully
-
-// 2.   Click the "Pricing" link in the header
-//      Expected Result:
-//      The Pricing page should load successfully
-
-// 3.   Verify that the header "Try the Copilot-powered platform" is visible
-//      Expected Result:
-//      The header "Try the Copilot-powered platform" should be visible
-
-// 4.   Scroll to the "Compare all features" section
-//      Expected Result:
-//      The "Compare all features" section should be visible
-
-// 5.   Click the "Compare all features" link
-//      Expected Result:
-//      The Compare Features page or section should load successfully
-
-// 6.   Verify that the header "Compare features" is visible
-//      Expected Result:
-//      The header "Compare features" should be visible
 
