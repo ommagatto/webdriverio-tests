@@ -194,21 +194,42 @@ describe("github tests", () => {
     //      Expected Result:
     //      The homepage should load successfully
 
-    // 2.   Open "https://github.com/apps/desktop"
+    // 2.   Scroll to the footer section
+    //      Expected Result:
+    //      The footer section should be visible
+
+    // 3.   Click the "GitHub Desktop" link
     //      Expected Result:
     //      The GitHub Desktop page should load successfully
 
-    // 3.   Verify that the "Download for Windows" button is visible
+    // 4.   Verify that the "Download now" button is visible
     //      Expected Result:
-    //      The "Download for Windows" button should be visible and enabled
+    //      The "Download now" button should be visible and enabled
 
-    // 4.   Click the "Download for Windows" button
+    // 5.   Click the "Download now" button
+    //      Expected Result:
+    //      The GitHub Desktop download page should load successfully
+
+    // 6.   Verify that the URL is "https://desktop.github.com/download/"
+    //      Expected Result:
+    //      The current URL should be "https://desktop.github.com/download/"
+
+    // 7.   Verify that the GitHub Desktop download option is visible
+    //      Expected Result:
+    //      The GitHub Desktop download option should be visible and enabled
+
+    // 8.   Click the download button
     //      Expected Result:
     //      The GitHub Desktop installer download should start successfully
 
-    // 5.   Verify that the GitHub Desktop installer file has been downloaded
+    // 9.   Verify that the GitHub Desktop installer file has been downloaded
     //      Expected Result:
-    //      A GitHub Desktop installer file should be present in the configured download directory
+    //      The GitHub Desktop installer file should be present in the configured download directory
+
+
+
+
+
 
 
 
