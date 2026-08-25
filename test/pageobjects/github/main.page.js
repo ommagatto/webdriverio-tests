@@ -3,9 +3,6 @@ class MainPage {
     get signUpButton() { return $('a[href="/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"]') }
     get securitySection() { return $('section[id="security"]') }
     get exploreAdvancedSecurityLink() { return $('div a[href="/security/advanced-security"]') }
-
-    // Footer
-    get footer() { return $('[partial-name="marketing-footer"]') }
     
 
 
