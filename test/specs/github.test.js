@@ -166,13 +166,13 @@ describe("github tests", () => {
         await MainPage.openMainPage()
         await Footer.scrollToFooter()
 
-        await Footer.isPricingDisplayed()
+        await Footer.verifyPricingIsDisplayed()
         await Footer.clickOnPricing()
         await PricingPage.checkPageURL()
 
         await PricingPage.assertHeaderText()
         await PricingPage.scrollTostartFreeTrialButton()
-        await PricingPage.isStartFreeTrialButtonDisplayed()
+        await PricingPage.verifyStartFreeTrialButtonIsDisplayed()
         await PricingPage.clickStartFreeTrialButton()
         await PickEnterprisePlanPage.checkPageURL()
 

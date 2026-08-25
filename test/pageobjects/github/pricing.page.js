@@ -1,7 +1,7 @@
 class PricingPage {
 
     pageURL = "https://github.com/pricing"
-    
+
     get header() { return $('h1[class="h2-mktg"]') }
     get startFreeTrialButton() { return $('a[class="d-block btn-mktg btn-free-trial px-2"]') }
 
@@ -22,8 +22,8 @@ class PricingPage {
     };
 
 
-    async isStartFreeTrialButtonDisplayed() {
-        await this.startFreeTrialButton.isDisplayed({ withinViewport: true })
+    async verifyStartFreeTrialButtonIsDisplayed() {
+        await expect(this.startFreeTrialButton).toBeDisplayed()
     }
 
 
