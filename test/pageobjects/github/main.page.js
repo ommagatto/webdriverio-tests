@@ -1,5 +1,7 @@
 class MainPage {
 
+    pageURL = "https://github.com/"
+    
     get signUpButton() { return $('a[href="/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home"]') }
     get securitySection() { return $('section[id="security"]') }
     get exploreAdvancedSecurityLink() { return $('div a[href="/security/advanced-security"]') }
@@ -8,8 +10,8 @@ class MainPage {
 
     // Open main page
     async openMainPage() {
-        await browser.url("https://github.com/")
-        await expect(browser).toHaveUrl(expect.stringContaining("github.com"))
+        await browser.url(this.pageURL)
+        await expect(browser).toHaveUrl( expect.stringContaining(this.pageURL) )
     }
 
     // Scroll to Footer
