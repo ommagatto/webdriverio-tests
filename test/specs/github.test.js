@@ -1,20 +1,20 @@
 import { browser, expect } from "@wdio/globals"
-import MainPage from "../pages/github/main.page.js"
-import Footer from "../pages/github/footer.js"
+import MainPage from "../pageobjects/github/main.page.js"
+import Footer from "../pageobjects/github/footer.js"
 
 
 // Security / Sub Navigation Bar
-import SecuritySubNavBar from "../pages/github/security.sub-nav-bar.js"
+import SecuritySubNavBar from "../pageobjects/github/security.sub-nav-bar.js"
 // Security / Advanced Security
-import SecurityAdvancedSecurityPage from "../pages/github/security.advanced-security.page.js"
+import SecurityAdvancedSecurityPage from "../pageobjects/github/security.advanced-security.page.js"
 // Security / Secret Protection
-import SecurityAdvancedSecuritySecretProtectionPage from "../pages/github/security.advanced-security.secret-protection.page.js"
+import SecurityAdvancedSecuritySecretProtectionPage from "../pageobjects/github/security.advanced-security.secret-protection.page.js"
 // Security / Code Security
-import SecurityAdvancedSecurityCodeSecurityPage from "../pages/github/security.advanced-security.code-security.page.js"
+import SecurityAdvancedSecurityCodeSecurityPage from "../pageobjects/github/security.advanced-security.code-security.page.js"
 // Security / Supply Chain Security
-import SecurityAdvancedSecuritySoftwareSupplyChainPage from "../pages/github/security.advanced-security.software-supply-chain.page.js"
+import SecurityAdvancedSecuritySoftwareSupplyChainPage from "../pageobjects/github/security.advanced-security.software-supply-chain.page.js"
 // Security / Plans & pricing
-import SecurityPlansPage from "../pages/github/security.plans.js"
+import SecurityPlansPage from "../pageobjects/github/security.plans.js"
 
 
 
