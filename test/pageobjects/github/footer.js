@@ -18,6 +18,10 @@ class Footer {
         await this.pricing.click()
     }
 
+    async isPricingDisplayed() {
+        await this.pricing.isDisplayed({ withinViewport: true })
+    }
+
 
 }
     
