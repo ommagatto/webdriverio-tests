@@ -1,5 +1,6 @@
 import { browser, expect } from "@wdio/globals"
 import MainPage from "../pages/github/main.page.js"
+import Footer from "../pages/github/footer.js"
 
 
 // Security / Sub Navigation Bar
