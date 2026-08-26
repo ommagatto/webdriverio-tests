@@ -11,7 +11,7 @@ class PricingPage {
     }
 
     async assertHeaderText() {
-        await expect(this.header).toHaveText("Try the Copilot-powered platform")
+        await expect(this.header).toHaveText("Try GitHub, the complete developer platform")
     }
 
 

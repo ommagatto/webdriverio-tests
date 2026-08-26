@@ -149,9 +149,9 @@ describe("github tests", () => {
     //      Expected Result:
     //      The Pricing page should load successfully
 
-    // 5.   Verify that the header "Try the Copilot-powered platform" is visible
+    // 5.   Verify that the header "Try GitHub, the complete developer platform" is visible
     //      Expected Result:
-    //      The header "Try the Copilot-powered platform" should be visible
+    //      The header "Try GitHub, the complete developer platform" should be visible
 
     // 6.   Verify that the "Start a free trial" button in the Enterprise card is visible
     //      Expected Result:
@@ -239,7 +239,6 @@ describe("github tests", () => {
     //      The current URL should contain "play.google.com/store/apps/details?id=com.github.android"
 
 
-
     it.only("should verify GitHub Mobile app download links for iOS and Android", async () => {
         await MainPage.openMainPage()
         await Footer.scrollToFooter()
@@ -301,11 +300,6 @@ describe("github tests", () => {
 
 
 
-
-
-
-
-
     // Test Case 5: Verify Pricing Page Features
 
     // 1.   Open "https://github.com/"
@@ -316,9 +310,9 @@ describe("github tests", () => {
     //      Expected Result:
     //      The Pricing page should load successfully
 
-    // 3.   Verify that the header "Try the Copilot-powered platform" is visible
+    // 3.   Verify that the header "Try GitHub, the complete developer platform" is visible
     //      Expected Result:
-    //      The header "Try the Copilot-powered platform" should be visible
+    //      The header "Try GitHub, the complete developer platform" should be visible
 
     // 4.   Scroll to the "Compare all features" section
     //      Expected Result:
