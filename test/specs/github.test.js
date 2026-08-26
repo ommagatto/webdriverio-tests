@@ -179,7 +179,7 @@ describe("github tests", () => {
         await PricingPage.checkPageURL()
 
         await PricingPage.assertHeaderText()
-        await PricingPage.scrollTostartFreeTrialButton()
+        await PricingPage.scrollToStartFreeTrialButton()
         await PricingPage.verifyStartFreeTrialButtonIsDisplayed()
         await PricingPage.clickStartFreeTrialButton()
         await PickEnterprisePlanPage.checkPageURL()

@@ -15,7 +15,7 @@ class PricingPage {
     }
 
 
-    async scrollTostartFreeTrialButton() {
+    async scrollToStartFreeTrialButton() {
         await this.startFreeTrialButton.scrollIntoView({
             block: "center",
         });
