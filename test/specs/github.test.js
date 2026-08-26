@@ -22,6 +22,9 @@ import PricingPage from "../pageobjects/github/pricing.page.js"
 // Pick your trial enterprise plan
 import PickEnterprisePlanPage from "../pageobjects/github/organizations.enterprise_plan.js"
 
+// GitHub Mobile
+import GitHubMobilePage from "../pageobjects/github/mobile.page.js"
+
 
 
 
@@ -232,8 +235,25 @@ describe("github tests", () => {
 
 
 
+    it.only("should verify GitHub Mobile app download links for iOS and Android", async () => {
+        await MainPage.openMainPage()
+        await Footer.scrollToFooter()
+        await Footer.clickGitHubMobile()
 
+        // iOS
+        await GitHubMobilePage.verifyDownloadForiOSButtonIsDisplayed()
+        await GitHubMobilePage.verifyDownloadForiOSButtonIsEnabled()
+        await GitHubMobilePage.clickDownloadForiOSButton()
+        await expect(browser).toHaveUrl(expect.stringContaining("https://apps.apple.com/us/app/github/id1477376905"))
+        
+        await browser.back()
 
+        // Android
+        await GitHubMobilePage.verifyDownloadForAndroidButtonIsDisplayed()
+        await GitHubMobilePage.verifyDownloadForAndroidButtonIsEnabled()
+        await GitHubMobilePage.clickDownloadForAndroidButton()
+        await expect(browser).toHaveUrl("https://play.google.com/store/apps/details?id=com.github.android")
+    });
 
 
 
