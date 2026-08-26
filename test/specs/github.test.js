@@ -326,6 +326,17 @@ describe("github tests", () => {
     //      Expected Result:
     //       The "Compare features" header in the comparison section should be visible
 
+
+    it("shoud verify pricing page features", async () => {
+        await MainPage.openMainPage()
+        await Header.clickPricingButton()
+        await PricingPage.assertHeaderText()
+
+        
+        await PricingPage.scrollToCompareAllFeatures()
+        await PricingPage.clickcompareAllFeaturesLink()
+        await PricingPage.assertCompareFeaturesHeaderText()
+    });
     
 
 });
