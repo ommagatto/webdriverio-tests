@@ -188,7 +188,7 @@ describe("github tests", () => {
 
 
 
-    // Test Case 3: Download GitHub Desktop
+    // Test Case 3: Verify GitHub Mobile App Download Links
 
     // 1.   Open "https://github.com/"
     //      Expected Result:
@@ -198,33 +198,38 @@ describe("github tests", () => {
     //      Expected Result:
     //      The footer section should be visible
 
-    // 3.   Click the "GitHub Desktop" link
+    // 3.   Click the "GitHub Mobile" link
     //      Expected Result:
-    //      The GitHub Desktop page should load successfully
+    //      The GitHub Mobile page should load successfully
 
-    // 4.   Verify that the "Download now" button is visible
+    // 4.   Verify that the "Download for iOS" button is visible
     //      Expected Result:
-    //      The "Download now" button should be visible and enabled
+    //      The "Download for iOS" button should be visible and enabled
 
-    // 5.   Click the "Download now" button
+    // 5.   Click the "Download for iOS" button
     //      Expected Result:
-    //      The GitHub Desktop download page should load successfully
+    //      The GitHub page on App Store should load successfully
 
-    // 6.   Verify that the URL is "https://desktop.github.com/download/"
+    // 6.   Verify that the URL is the GitHub app page on App Store
     //      Expected Result:
-    //      The current URL should be "https://desktop.github.com/download/"
+    //      The current URL should contain "apps.apple.com/us/app/github/id1477376905"
 
-    // 7.   Verify that the GitHub Desktop download option is visible
+    // 7.   Navigate back to the GitHub Mobile page
     //      Expected Result:
-    //      The GitHub Desktop download option should be visible and enabled
+    //      The GitHub Mobile page should load successfully
 
-    // 8.   Click the download button
+    // 8.   Verify that the "Download for Android" button is visible
     //      Expected Result:
-    //      The GitHub Desktop installer download should start successfully
+    //      The "Download for Android" button should be visible and enabled
 
-    // 9.   Verify that the GitHub Desktop installer file has been downloaded
+    // 9.   Click the "Download for Android" button
     //      Expected Result:
-    //      The GitHub Desktop installer file should be present in the configured download directory
+    //      The GitHub page on Google Play should load successfully
+
+    // 10.  Verify that the URL is the GitHub app page on Google Play
+    //      Expected Result:
+    //      The current URL should contain "play.google.com/store/apps/details?id=com.github.android"
+
 
 
 
