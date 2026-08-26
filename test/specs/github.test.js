@@ -320,11 +320,11 @@ describe("github tests", () => {
 
     // 5.   Click the "Compare all features" link
     //      Expected Result:
-    //      The Compare Features page or section should load successfully
+    //      The page should scroll down to the feature comparison section
 
     // 6.   Verify that the header "Compare features" is visible
     //      Expected Result:
-    //      The header "Compare features" should be visible
+    //       The "Compare features" header in the comparison section should be visible
 
     
 
