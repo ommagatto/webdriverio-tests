@@ -1,5 +1,8 @@
 import { browser, expect } from "@wdio/globals"
+import { Key } from 'webdriverio'
+
 import MainPage from "../pageobjects/github/main.page.js"
+import Header from "../pageobjects/github/header.js"
 import Footer from "../pageobjects/github/footer.js"
 
 
@@ -25,6 +28,8 @@ import PickEnterprisePlanPage from "../pageobjects/github/organizations.enterpri
 // GitHub Mobile
 import GitHubMobilePage from "../pageobjects/github/mobile.page.js"
 
+// Search Page
+import SearchPage from "../pageobjects/github/search.js"
 
 
 
@@ -259,8 +264,6 @@ describe("github tests", () => {
 
 
 
-
-
     // Test Case 4: Perform a Search
 
     // 1.   Open "https://github.com/"
@@ -280,6 +283,22 @@ describe("github tests", () => {
     //      Expected Result:
     //      At least one search result card should contain the word "wine",
     //      and its href should correspond to a valid search result
+
+    
+    it.only("should perform a search", async () => {
+        await MainPage.openMainPage()
+        await Header.clickSearchButton()
+
+        await Header.searchInput.addValue("wine")
+        await expect(Header.searchInput).toHaveValue("wine")
+        await browser.keys(Key.Enter)
+
+        // Verify that the word "wine" appears in one of the result cards
+        await SearchPage.checkResultsList("wine")
+    });
+
+
+
 
 
 
