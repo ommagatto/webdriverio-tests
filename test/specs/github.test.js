@@ -170,7 +170,7 @@ describe("github tests", () => {
     //      The "Enterprise Cloud" and "Enterprise Server" trial plans should be visible on the page
 
 
-    it.only("should pick enterprise cloud trial plan", async () => {
+    it("should pick enterprise cloud trial plan", async () => {
         await MainPage.openMainPage()
         await Footer.scrollToFooter()
 
@@ -239,7 +239,7 @@ describe("github tests", () => {
     //      The current URL should contain "play.google.com/store/apps/details?id=com.github.android"
 
 
-    it.only("should verify GitHub Mobile app download links for iOS and Android", async () => {
+    it("should verify GitHub Mobile app download links for iOS and Android", async () => {
         await MainPage.openMainPage()
         await Footer.scrollToFooter()
         await Footer.clickGitHubMobile()
@@ -284,7 +284,7 @@ describe("github tests", () => {
     //      and its href should correspond to a valid search result
 
     
-    it.only("should perform a search", async () => {
+    it("should perform a search and verify the results", async () => {
         await MainPage.openMainPage()
         await Header.clickSearchButton()
 
